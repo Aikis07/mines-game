@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="body flex justify-center bg-black font-main relative">
+    <div class="wrapper flex justify-center mx-24 bg-neutral-900 w-full h-screen">
+        <div class="inner flex mt-32 gap-1 h-fit">
+            <div class="left flex flex-col gap-1">
+                <div class="left__header bg-neutral-800 flex w-80 items-center justify-between p-5 rounded-tl-3xl">
+                    <div class="left__title flex items-center">
+                        <img src="./img/mines.svg" alt="">
+                        <h2 class="left__text text-white ml-2 font-semibold">Mines</h2>
+                    </div>
+                    <div class="left__actions flex items-center">
+                        <a class="left__link" href="#">
+                            <img class="left__action mr-4" src="./img/sound.svg" alt="">
+                        </a>
+                        <a class="left__link" href="#">
+                            <img class="left__action" src="./img/shield.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="left__control bg-neutral-800 p-5 rounded-bl-3xl h-full relative">
+                    <p class="left__desc text-neutral-400 text-xs">Ваша ставка (руб)</p>
+                    <div class="left__bid flex justify-between items-center bg-neutral-900 pl-5 pr-2 py-3 mt-3 rounded-2xl">
+                        <p id="current-bid" class="left__rub text-white font-semibold text-sm">0</p>
+                        <div class="left__wrapper flex gap-2 items-center">
+                            <a id="remove" class="left__link" href="#">
+                                <div class="left__inner flex items-center justify-center rounded-lg w-7 h-7 bg-neutral-800">
+                                    <img class="left__cart" src="./img/cart.svg" alt="">
+                                </div>
+                            </a>
+                            <a id="division" class="left__link" href="#">
+                                <div class="left__inner flex items-center justify-center rounded-lg w-7 h-7 bg-neutral-800">
+                                    <p class="left__division text-neutral-500 font-semibold">/2</p>
+                                </div>
+                            </a>
+                            <a id="mult" class="left__link" href="#">
+                                <div class="left__inner flex items-center justify-center rounded-lg w-7 h-7 bg-neutral-800">
+                                    <p class="left__division text-neutral-500 font-semibold">X2</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="left__desc text-neutral-400 text-xs mt-5">Количество мин</p>
+                    <div class="left__count flex bg-neutral-800 rounded-bl-2xl mt-3 justify-between gap-1">
+                        <div class="left__choise flex bg-neutral-900 rounded-l-2xl">
+                            <a class="left__num w-11 h-11 flex justify-center items-center bg-neutral-900 rounded-2xl" href="#">
+                                <p class="left__value text-white font-semibold">3</p>
+                            </a>
+                            <a class="left__num w-11 h-11 flex justify-center items-center bg-neutral-900 rounded-2xl" href="#">
+                                <p class="left__value text-white font-semibold">5</p>
+                            </a>
+                            <a class="left__num w-11 h-11 flex justify-center items-center bg-neutral-900 rounded-2xl" href="#">
+                                <p class="left__value text-white font-semibold">10</p>
+                            </a>
+                            <a class="left__num w-11 h-11 flex justify-center items-center bg-neutral-900 rounded-2xl" href="#">
+                                <p class="left__value text-white font-semibold">24</p>
+                            </a>
+                        </div>
+                        <input id="bid-input" class="left__input text-center bg-neutral-900 rounded-r-2xl outline-none text-neutral-400 flex-auto w-0 text-xs" type="number" placeholder="Изменить">
+                    </div>
+                    <div id="left-hidden" class="hide-block h-full w-full top-0 left-0 bg-black opacity-0 absolute hidden"></div>
+                    <button id="start" class="left__start bg-green-600 text-white font-bold w-full mt-5 rounded-2xl py-5">Начать игру</span></button>
+                </div>
+            </div>
+            <div class="right flex p-20 items-center bg-neutral-800 h-fit rounded-r-3xl gap-24 relative">
+                <div class="right__stars flex flex-col items-center">
+                    <img class="right__img" src="./img/star.svg" alt="">
+                    <p id="stars-count" class="right__count text-white mt-2 font-semibold">0</p>
+                </div>
+                <div class="right__field">
+                    <ul class="right__list flex gap-2 w-432 h-432 flex-wrap">
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="right__item">
+                            <a class="right__link" href="#">
+                                <img class="right__cube" src="./img/empty_cube.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right__mines flex flex-col items-center">
+                    <img class="right__img" src="./img/mine.svg" alt="">
+                    <p id="mines-count" class="right__count text-white mt-2 font-semibold">0</p>
+                </div>
+                <div id="right-hidden" class="hide-block h-full w-full top-0 left-0 bg-black absolute opacity-0 hidden"></div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-block" class="block h-screen w-screen bg-black absolute opacity-50 hidden"></div>
+    <div id="show-victory" class="massage absolute flex justify-center flex-col mt-80 bg-neutral-900 p-10 rounded-2xl hidden">
+        <h2 class="massage__title text-white">Вы выиграли</h2>
+        <button id="victory" class="massage__btn text-white mt-3 bg-neutral-700 rounded-lg">Ок</button>
+    </div>
+    <div id="show-loose" class="massage absolute flex justify-center flex-col mt-80 bg-red-400 p-10 rounded-2xl hidden">
+        <h2 class="massage__title text-white">Вы проиграли</h2>
+        <button id="loose" class="massage__btn text-white mt-3 bg-neutral-700 rounded-lg">Ок</button>
+    </div>
+    <script type="module" src="./js/mines/main.js"></script>
+</body>
+</html>

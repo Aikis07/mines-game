@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="body flex justify-center bg-black font-main">
+    <div class="wrapper flex justify-center mx-24 bg-neutral-900 w-full h-screen">
+        <div class="inner flex flex-col bg-neutral-800 mt-32 p-5 rounded-3xl h-max">
+            <div class="inner__header flex justify-between items-center">
+                <div class="inner__title flex items-center">
+                    <img class="inner__icon" src="./img/bag.svg" alt="">
+                    <h2 class="inner__text text-white ml-3">Cases</h2>
+                </div>
+                <div class="inner__actions flex items-center">
+                    <button id="show-modal" class="enter text-white px-5 py-2 bg-neutral-700 w-max rounded-lg mr-5">Войти</button>
+                    <a class="inner__link" href="#">
+                        <img class="inner__action mr-4" src="./img/sound.svg" alt="">
+                    </a>
+                    <a class="inner__link" href="#">
+                        <img class="inner__action" src="./img/shield.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <ul class="inner__list flex gap-3 mt-8">
+                <li class="inner__item">
+                    <a id="mines" class="inner__link" href="#">
+                        <img class="inner__img rounded-3xl hover:scale-125 hover:duration-500" src="./img/SweetBonanza.svg" alt="">
+                    </a>
+                </li>
+                <li class="inner__item">
+                    <img class="inner__img rounded-3xl hover:scale-125 hover:duration-500" src="./img/GatesOfOlympus.svg" alt="">
+                </li>
+                <li class="inner__item">
+                    <img class="inner__img rounded-3xl hover:scale-125 hover:duration-500" src="./img/BigBadWolfMegaways.svg" alt="">
+                </li>
+                <li class="inner__item">
+                    <img class="inner__img rounded-3xl hover:scale-125 hover:duration-500" src="./img/TheDogHouse.svg" alt="">
+                </li>
+                <li class="inner__item">
+                    <img class="inner__img rounded-3xl hover:scale-125 hover:duration-500" src="./img/RoosterFury.svg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal" class="modal absolute flex mt-36 hidden">
+        <div class="modal__form bg-neutral-700 rounded-l-3xl">
+            <div class="modal__inner px-10 py-5 flex flex-col items-center">
+                <h2 class="modal__title text-white font-bold">Вход</h2>
+                <div class="modal__reg flex border-b pb-5 mt-4 border-neutral-500">
+                    <p class="modal__text text-neutral-400">Ещё нет аккаунта?</p>
+                    <a class="modal__link text-teal-500 ml-1" href="#">Зарегестрироваться</a>
+                </div>
+                <ul class="socials flex justify-between w-full mt-5 items-center">
+                    <li class="socials__item flex justify-center items-center w-12 h-11 bg-neutral-800 rounded-lg">
+                        <img class="socials__link" src="./img/vk.svg" alt="">
+                    </li>
+                    <li class="socials__item flex justify-center items-center w-12 h-11 bg-neutral-800 rounded-lg">
+                        <img class="socials__link" src="./img/google.svg" alt="">
+                    </li>
+                    <li class="socials__item flex justify-center items-center w-12 h-11 bg-neutral-800 rounded-lg">
+                        <img class="socials__link" src="./img/fb.svg" alt="">
+                    </li>
+                    <li class="socials__item flex justify-center items-center w-12 h-11 bg-neutral-800 rounded-lg">
+                        <img class="socials__link" src="./img/tg.svg" alt="">
+                    </li>
+                    <li class="socials__item flex justify-center items-center w-12 h-11 bg-neutral-800 rounded-lg">
+                        <img class="socials__link" src="./img/twitter.svg" alt="">
+                    </li>
+                </ul>
+                <p class="modal__desc text-neutral-400 mt-5">или используйте ваш пароль для входа</p>
+                <form class="modal__inputs flex flex-col gap-5 mt-5 w-full" action="">
+                    <input id="login" class="modal__input px-5 py-4 rounded-2xl outline-none text-xs placeholder-neutral-500 bg-neutral-800 text-neutral-500" type="email" placeholder="Введите email">
+                    <input id="password" class="modal__input px-5 py-4 rounded-2xl outline-none text-xs placeholder-neutral-500 bg-neutral-800 text-neutral-500" type="password" placeholder="Введите пароль">
+                    <button id="enter-btn" class="modal__btn py-5 bg-teal-500 text-white rounded-2xl font-bold">Войти</button>
+                </form>
+                <a class="modal__link mt-5 text-teal-500" href="#">Забыли пароль?</a>
+            </div>
+        </div>
+        <div class="modal__right flex relative">
+            <img class="modal__img rounded-r-3xl" src="./img/modal_img.svg" alt="">
+            <a id="modal-cross" class="modal__cross absolute top-6 right-6" href="#">
+                <img class="modal__icon" src="./img/cross.svg" alt="">
+            </a>
+        </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./js/index/main.js"></script>
+</body>
+
+</html>
